@@ -6,9 +6,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Message styling */
+b {
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/* Center the form */
+form[name="login"] {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 50px auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+/* Table styling */
+form[name="login"] table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+/* Labels */
+form[name="login"] td:first-child {
+    padding-right: 15px;
+    text-align: right;
+    font-weight: bold;
+    vertical-align: middle;
+    width: 30%;
+}
+
+/* Inputs */
+form[name="login"] input[type="text"],
+form[name="login"] input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+form[name="login"] input[type="text"]:focus,
+form[name="login"] input[type="password"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+/* Submit button */
+form[name="login"] input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form[name="login"] input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive for small screens */
+@media (max-width: 500px) {
+    form[name="login"] {
+        padding: 20px;
+    }
+    form[name="login"] td:first-child {
+        text-align: left;
+        padding-bottom: 5px;
+    }
+}
+</style>
+
       
 </head>
 <body>
+  
     
      {% if msg %}
     <b style="color: blue;">{{msg}}</b>
@@ -31,6 +120,7 @@
           <tr>
             <td colspan="2" align ="center">
             <input type="submit" value="Login" class="btn btn-primary"></td>
+            <td><a href="{% url 'forgot-password' %}">Forgot Password</a></td>
         </tr>
       </table>
     </form>

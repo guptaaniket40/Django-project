@@ -6,6 +6,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Message styling */
+b {
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/* Center the form */
+form[name="signup"] {
+    background-color: #fff;
+    padding: 30px;
+    margin: 0 auto 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+/* Table styling */
+form[name="signup"] table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+/* Labels */
+form[name="signup"] td:first-child {
+    padding-right: 15px;
+    text-align: right;
+    font-weight: bold;
+    vertical-align: top;
+    width: 35%;
+}
+
+/* Inputs and textarea */
+form[name="signup"] input[type="text"],
+form[name="signup"] input[type="password"],
+form[name="signup"] textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+form[name="signup"] input[type="text"]:focus,
+form[name="signup"] input[type="password"]:focus,
+form[name="signup"] textarea:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.2);
+    outline: none;
+}
+
+/* Textarea height */
+form[name="signup"] textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Submit button */
+form[name="signup"] input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form[name="signup"] input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Responsive for small screens */
+@media (max-width: 600px) {
+    form[name="signup"] {
+        padding: 20px;
+    }
+    form[name="signup"] td:first-child {
+        text-align: left;
+        padding-bottom: 5px;
+    }
+}
+</style>
+
       
 </head>
 <body>
